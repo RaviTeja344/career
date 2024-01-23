@@ -1,0 +1,15 @@
+pipeline{
+    agent any
+    tools{
+        maven 'maven-3.9.4'
+    }
+    stages{
+        stage('Build Maven'){
+        steps{
+            checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/RaviTeja344/career']])
+            sh 'mvn clean test'
+            sh 'mvn clean install'
+        }
+    }
+}
+}
