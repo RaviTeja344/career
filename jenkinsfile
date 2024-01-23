@@ -17,5 +17,12 @@ pipeline{
     }
     }
 }
+stage('Push Image to Hub'){
+steps{
+script{
+sh 'docker login -u -p'
+}
+}
+}
 }
 }
