@@ -13,4 +13,4 @@ db_mysql:
     - ./db_mysql:/docker-entrypoint-initdb.d/
     - db_mysql:/var/lib/mysql
   networks:
-    - networ
+    - network
