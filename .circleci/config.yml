@@ -12,4 +12,4 @@ jobs:
 
       - run:
           name: Maven Clean Install
-          command: mvn clean
+          command: mvn clean install
