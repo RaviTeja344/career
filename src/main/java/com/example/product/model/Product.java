@@ -4,6 +4,8 @@ package com.example.product.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @NoArgsConstructor
 @Builder
@@ -18,5 +20,6 @@ public class Product {
     private int productID;
     private String productName;
     private int productPrice;
+    //private Location location;
 
 }
