@@ -1,0 +1,15 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: circleci/openjdk:17-jdk
+
+    working_directory: /app
+
+    steps:
+      - checkout
+
+      - run:
+          name: Maven Clean Install
+          command: mvn clean install
