@@ -13,3 +13,13 @@ jobs:
       - run:
           name: Maven Clean Install
           command: mvn clean install
+
+      - run:
+          name: Install MySQL Client
+          command: sudo apt-get update && sudo apt-get install -y mysql-client
+
+
+      - run:
+          name: Execute MySQL Queries
+          command: |
+            mysql -h jdbc:mysql://localhost:3306/product1 -u root -p Ravi123$ -e "SHOW DATABASES;"
